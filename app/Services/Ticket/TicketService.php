@@ -48,6 +48,6 @@ class TicketService implements TicketInterface
 
     public function userMessages($user)
     {
-        return $user->chat?->messages;
+        return $user->chat?->messages ?? null;
     }
 }

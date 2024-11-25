@@ -36,9 +36,6 @@
     <script src="{{asset('admin/js/topojson.min.js')}}"></script>
 
 
-    <script src="{{asset('admin/js/gauge.min.js')}}"></script>
-    <script src="{{asset('admin/js/jquery.sparkline.min.js')}}"></script>
-    <script src='{{asset('admin/js/select2.min.js')}}'></script>
     <script src='{{asset('admin/js/jquery.steps.min.js')}}'></script>
     <script src='{{asset('admin/js/jquery.validate.min.js')}}'></script>
 

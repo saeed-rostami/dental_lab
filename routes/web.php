@@ -29,7 +29,7 @@ Route::get('/logout', function () {
     ->name('logout');
 
 Route::get('/chat', \App\Livewire\Chat::class)
-    ->middleware('auth:web')
+//    ->middleware('auth:web')
 ->name('chat');
 
 Route::get('/users', function () {

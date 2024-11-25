@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="{{asset('test/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('test/css/style.css')}}">
     {{--    @livewireStyles--}}
+
+    <script src="{{ asset('test/js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('test/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('test/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('test/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('test/js/scripts.js') }}"></script>
+    <script src="{{ asset('js/moment.js') }}"></script>
     @stack('styles')
 
 </head>
@@ -27,12 +34,7 @@
 
 
 
-<script src="{{ asset('test/js/jquery-3.2.1.min.js') }}"></script>
-<script src="{{ asset('test/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('test/js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('test/js/jquery.ajaxchimp.min.js') }}"></script>
-<script src="{{ asset('test/js/scripts.js') }}"></script>
-<script src="{{ asset('js/moment.js') }}"></script>
+
 
 
 

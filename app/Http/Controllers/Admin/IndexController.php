@@ -17,6 +17,9 @@ class IndexController extends Controller
         $courses_count = \Illuminate\Support\Facades\DB::table('courses')
             ->count();
 
+        $services_count = \Illuminate\Support\Facades\DB::table('services')
+            ->count();
+
         $new_messages =  ChatMessage::query()
         ->whereHas('user' , function (Builder $q) {
             $q->whereNot('is_admin' , true);
@@ -24,6 +27,6 @@ class IndexController extends Controller
         ->whereNot('is_read' , true)
         ->count();
 
-        return view('admin.pages.index', compact(['courses_count', 'users_count' , 'new_messages']));
+        return view('admin.pages.index', compact(['courses_count', 'users_count' , 'new_messages' , 'services_count']));
     }
 }
