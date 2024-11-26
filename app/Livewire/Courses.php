@@ -18,7 +18,7 @@ class Courses extends Component
         HTML;
     }
 
-//    #[Lazy(isolate: false)]
+//    #[Lazy(isolate: true)]
     public function render()
     {
         $courses = Course::query()->take(10)->get();

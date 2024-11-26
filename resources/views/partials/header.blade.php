@@ -27,7 +27,7 @@
                                 </a></li>
                         @else
                             <li class="nav-item active"><a
-                                    wire:navigate class="nav-link" href="{{ route('admin.index') }}" >
+                                    class="nav-link" href="{{ route('admin.index') }}" >
                                     پنل مدیریت
                                       <span class="ti-crown">
 

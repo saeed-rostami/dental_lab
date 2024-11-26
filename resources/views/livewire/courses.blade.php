@@ -5,7 +5,7 @@
             <div class="section-style"></div>
         </div>
 
-        <div class="owl-carousel owl-theme testimonial">
+        <div class="owl-carousel owl-theme testimonial" >
             @foreach($courses as $course)
 
                 <div class="card text-dark card-has-bg click-col" style="background-image:url('/pics/banner/dent_3.jpg');">
@@ -32,3 +32,37 @@
 
     </div>
 </section>
+
+<script>
+
+    document.addEventListener("livewire:navigated" , () => {
+        if ($('.testimonial').length) {
+            $('.testimonial').owlCarousel({
+                autoplay: true,
+                autoplayHoverPause:true,
+                autoplayTimeout:2000,
+                loop: true,
+                margin: 30,
+                rtl:true,
+                // items: 5,
+                nav: false,
+                dots: true,
+
+                responsiveClass: true,
+                slideSpeed: 300,
+                paginationSpeed: 500,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    800: {
+                        items: 2
+                    },
+                    1200: {
+                        items: 3
+                    }
+                }
+            })
+        }
+    })
+</script>
