@@ -1,23 +1,32 @@
-<section class="section-margin mb-5 services">
-    <div class="container">
-        <div class="section-intro pb-85px text-center">
-            <h2>خدمات</h2>
-            <div class="section-style"></div>
-        </div>
-
-        <div class="row">
-            @foreach($courses as $course)
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="card-service text-center">
-                    <div class="service-icon">
-                        <img class=" w-25 h-25" src="{{ asset('pics/banner/dent_4.jpg') }}" alt="">
-                    </div>
-                    <h3>{{$course->title}}</h3>
-                    <p>{{$course->description}} </p>
+{{--<section class="section-margin services">--}}
+{{--    <div class="container">--}}
+        <section class="dark">
+            <div class="container py-4">
+                <div class="section-intro pb-85px text-center">
+                    <h2 class="text-white-50">خدمات ما</h2>
+                    <div class="section-style text-white-50"></div>
                 </div>
+
+                @foreach($services as $service)
+                    <article class="postcard dark blue">
+                        <a class="postcard__img_link" >
+                            <img class="postcard__img" src="{{asset('pics/banner/dent_5.jpg')}}" alt="Image Title" />
+                        </a>
+                        <div class="postcard__text">
+                            <h2 class="text-white-50">
+                                {{$service->title}}
+                            </h2>
+                            <div class="postcard__bar"></div>
+                            <div>
+                                <span>
+                                    {{$service->description}}
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                @endforeach
             </div>
-            @endforeach
-        </div>
-    </div>
-</section>
+        </section>
+{{--    </div>--}}
+{{--</section>--}}

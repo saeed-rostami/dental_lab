@@ -37,12 +37,16 @@ $(function() {
 	-------------------------------------------------------------------------------*/
     if ($('.testimonial').length) {
         $('.testimonial').owlCarousel({
+            autoplay: true,
+            autoplayHoverPause:true,
+            autoplayTimeout:2000,
             loop: true,
             margin: 30,
             rtl:true,
             // items: 5,
             nav: false,
             dots: true,
+
             responsiveClass: true,
             slideSpeed: 300,
             paginationSpeed: 500,

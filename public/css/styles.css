@@ -1178,7 +1178,9 @@ h3, .h3 {
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s
+    transition: all 0.3s ease 0s;
+    background: #1e1859;
+    background: linear-gradient(0deg, rgba(181, 33, 255, 0.38) 0%, #1e1859 100%);
 }
 
 @media (min-width: 992px) {

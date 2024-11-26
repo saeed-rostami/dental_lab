@@ -10,7 +10,6 @@
     </section>
     <!--================ Banner Section end =================-->
 
-
     <!--================ Testimonial section start =================-->
     <livewire:courses></livewire:courses>
     <!--================ Testimonial section end =================-->
