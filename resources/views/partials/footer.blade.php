@@ -22,11 +22,8 @@
             <p class="footer-text m-0 col-lg-8 col-md-12">
                 {{ verta()->format("%Y, %b %d") }}
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                CopyRight &copy;
-                All Rights reserved | This template is made with
 
-                <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="-blank">Colorlib</a>
-                <br>فارسی و راست چین شده با  <i class="ti-heart" aria-hidden="true"></i> توسط <a href="https://webrubik.com/" target="-blank">Webrubik.com</a>
+                <br>طراحی و توسعه   توسط <a href="saeedrostami1991@gmail.com/" target="blank">saeedrostami1991@gmail.com</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             <div class="col-lg-4 col-md-12 text-center text-lg-left footer-social">
                 <a target="_blank" href="http://instagram.com/{{$setting->instagram}}">

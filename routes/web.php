@@ -32,6 +32,10 @@ Route::get('/chat', \App\Livewire\Chat::class)
 //    ->middleware('auth:web')
 ->name('chat');
 
+Route::get('/course/{course_id}', \App\Livewire\Course::class)
+//    ->middleware('auth:web')
+    ->name('course');
+
 Route::get('/users', function () {
     return \App\Models\User::all();
 })->middleware('isAdmin')

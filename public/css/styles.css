@@ -1213,6 +1213,7 @@ h3, .h3 {
     z-index: 1
 }
 
+
 .priceTable-bg::after {
     content: "";
     display: block;
@@ -2079,7 +2080,7 @@ h3, .h3 {
 
 .single-post-area .blog-details {
     box-shadow: none;
-    padding: 0
+    /*padding: 0*/
 }
 
 .single-post-area .social-links {
@@ -2379,7 +2380,8 @@ h3, .h3 {
     }
 
     .comments-area .comment-list .single-comment .comment {
-        font-size: 10px
+        font-size: 14px;
+        color: #c7d3b9;
     }
 }
 
