@@ -29,4 +29,12 @@ class Comment extends Model
     {
         return $this->belongsTo(Course::class);
     }
+
+    public function scopeOnlyUsers(Builder $q)
+    {
+        $q->whereHas('user', function (Builder $w) {
+            $w->whereNull('is_admin');
+        })
+        ;
+    }
 }

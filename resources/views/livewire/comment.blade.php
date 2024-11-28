@@ -7,7 +7,7 @@
                 <div class="single-comment justify-content-between d-flex">
                     <div class="user justify-content-between d-flex">
                         <div class="thumb">
-                            <img src="{{ asset('pics/logo.png') }}" alt="">
+                            <img src="{{ asset('pics/user.jpg') }}" alt="">
                         </div>
                         <div class="desc">
                             <p class="comment">
@@ -31,8 +31,10 @@
             @endif
 
         @if($comment->reply)
-                <div class="d-flex border border-light">
-                    <img class="rounded-circle comment-img" src="#/128/cc99ff/ffffff?text=S" width="128" height="128" alt="">
+                <div class="d-flex border border-dark mr-5 mb-5">
+                   <div class="thumb">
+                       <img src="{{asset('pics/admin.jpg')}}"  alt="">
+                   </div>
                     <div class="flex-grow-1 ms-3">
                         <div class="mb-1"><a href="#" class="fw-bold link-body-emphasis pe-1">پاسخ ادمین</a> <span class="text-body-secondary text-nowrap">
                                  {{verta($comment->reply->created_at)->formatDifference()}}

@@ -41,6 +41,14 @@
         </ul>
         <ul class="navbar-nav flex-fill w-100 mb-2">
             <li class="nav-item w-100">
+                <a wire:navigate class="nav-link" href="{{ route('admin.comment.index') }}">
+                    <i class="fe fe-rewind fe-16"></i>
+                    <span class="ml-3 item-text">نظرات</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav flex-fill w-100 mb-2">
+            <li class="nav-item w-100">
                 <a wire:navigate class="nav-link" href="{{ route('admin.ticket.index') }}">
                     <i class="fe fe-message-square fe-16"></i>
                     <span class="ml-3 item-text">پیام ها</span>

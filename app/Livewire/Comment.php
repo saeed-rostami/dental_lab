@@ -26,7 +26,25 @@ class Comment extends Component
                 ->duration(5000)
                 ->error('ابتدا وارد حساب کاربری شوید' )
             ;
+            return false;
         }
+
+        $comment_ex = \App\Models\Comment::query()
+            ->where('user_id', Auth::id())
+            ->where('course_id', $this->course->id)
+            ->whereBetween('created_at', [now()->subHour(), now()])
+            ->exists();
+        if ($comment_ex) {
+            \notyf()
+                ->position('x', 'right')
+                ->position('y', 'bottom')
+                ->duration(5000)
+                ->error('به محدودیت ارسال کامنت در یک ساعت رسیدید' )
+            ;
+            return false;
+        }
+
+
         $this->validate([
             'comment' => ['required', 'string' , 'max:500' , 'min:3']
         ]);

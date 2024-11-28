@@ -94,4 +94,11 @@ Route::prefix('panel')->middleware('isAdmin')->group(function () {
     Route::prefix('settings')->group(function () {
         Route::get('/', \App\Livewire\Admin\Settings::class)->name('admin.settings');
     });
+
+    //    COMMENT###########
+    Route::prefix('comment')->group(function () {
+        Route::get('/', \App\Livewire\Admin\Comment::class)->name('admin.comment.index');
+
+        Route::get('/reply/{comment}', \App\Livewire\Admin\CommentReply::class)->name('admin.comment.reply');
+    });
 });
