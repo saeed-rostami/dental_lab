@@ -4,5 +4,8 @@
     "build":{
         "location":"iran"
     },
+    "composer": {
+        "args": ["install", "--ignore-platform-reqs"]
+    },
     "disks":[]
 }
