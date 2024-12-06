@@ -1,11 +1,17 @@
 {
-    "app":"arash-dent",
-    "port":3000,
-    "build":{
-        "location":"iran"
+    "app": "arash-dent",
+    "port": 3000,
+    "build": {
+        "location": "iran"
     },
-    "composer": {
-        "args": ["install", "--ignore-platform-reqs"]
+    "platform": "php",
+    "php": {
+        "version": "8.3"
     },
-    "disks":[]
+    "laravel": {
+        "routeCache": true,
+        "configCache": true,
+        "buildAssets": true
+    },
+    "disks": []
 }
