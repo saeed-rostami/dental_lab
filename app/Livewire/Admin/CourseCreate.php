@@ -3,11 +3,17 @@
 namespace App\Livewire\Admin;
 
 use App\Models\Course;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class CourseCreate extends Component
 {
+    use WithFileUploads;
+
+    #[Validate(['nullable', 'file'])]
+    public $image;
     #[Validate(['required', 'string'])]
     public $title;
     #[Validate(['required', 'string'])]
@@ -19,12 +25,15 @@ class CourseCreate extends Component
     {
         $this->validate();
 
+        if ($this->image) {
+           $path = $this->image->store('images/courses' , 'public');
+        }
         Course::query()
             ->create([
                 'title' => $this->title,
                 'description' => $this->description,
                 'price' => $this->price,
-
+                'image_path' => $path ?? null,
             ]);
 
         \notyf()

@@ -39,6 +39,7 @@
                                 <th>نام</th>
                                 <th>توضیحات</th>
                                 <th>وضعیت</th>
+                                <th>تصویر</th>
                                 <th>قیمت</th>
                                 <th>تاریخ ایجاد</th>
                                 <th>عملیات</th>
@@ -64,6 +65,10 @@
                                         <span class="badge badge-{{$course->status ? 'success' : 'danger'}}">
                                             {{$course->mobile_verified_at ? 'فعال' : 'غیر فعال'}}
                                         </span>
+                                    </td>
+
+                                    <td>
+                                        <img style="width: 75px; height: 75px" src="{{ asset('storage/'.$course->image_path) }}" alt="">
                                     </td>
 
                                     <td>

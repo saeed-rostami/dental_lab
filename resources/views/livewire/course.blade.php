@@ -6,7 +6,7 @@
             <div class="col-lg-12 posts-list rounded">
                 <div class="single-post">
                     <div class="feature-img d-flex justify-content-center mt-1">
-                        <img class="img-fluid rounded-circle" src="{{asset('pics/banner/dent_1.jpg')}}" alt="">
+                        <img class="img-fluid rounded-circle" src="{{ $course->image_path ? asset('storage/'.$course->image_path) : asset('pics/banner/dent_1.jpg')}}" alt="">
                     </div>
                     <div class="blog-details">
                         <h2>{{ $course->title }}</h2>

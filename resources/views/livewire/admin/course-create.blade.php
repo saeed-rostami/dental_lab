@@ -9,8 +9,8 @@
                     <div class="col-md-8">
                         <div class="card shadow mb-4">
                             <div class="card-body">
-                                <form wire:submit.prevent="store"  class="needs-validation"
-                                      novalidate enctype="multipart/form-data">
+                                <form wire:submit="store"  class="needs-validation"
+                                      novalidate>
                                     <div class="form-row">
                                         <div class="col-md-10 mb-3">
                                             <label for="exampleInputEmail1">اسم </label>
@@ -58,14 +58,19 @@
 
 
                                     <div class="custom-file mb-3">
-                                        <input name="file" type="file" class="custom-file-input"
-                                               id="validatedCustomFile">
+                                        <input wire:model="image" name="image" type="file" class="custom-file-input"
+                                             >
                                         <label class="custom-file-label" for="validatedCustomFile">Choose
                                             file...</label>
-                                        @error('file')
+                                        @error('image')
                                         <div class="text-danger"> {{ $message }} </div>
                                         @enderror
                                     </div>
+
+
+                                    @if($image)
+                                        <img style="width: 75px; height: 75px" src="{{ $image->temporaryUrl() }}" alt="">
+                                    @endif
                                     <button class="btn btn-primary" type="submit">بساز !</button>
                                 </form>
                             </div> <!-- /.card-body -->

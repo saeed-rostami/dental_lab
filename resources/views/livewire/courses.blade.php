@@ -8,7 +8,12 @@
         <div class="owl-carousel owl-theme testimonial" >
             @foreach($courses as $course)
 
-                    <div class="card text-dark card-has-bg click-col" style="background-image:url('/pics/banner/dent_3.jpg');">
+                    <div class="card text-dark card-has-bg click-col"
+                         style="background-image:url(
+                         {{$course->image_path ? asset('storage/'.$course->image_path) :'/pics/banner/dent_3.jpg'}}
+
+                         );">
+
                         <img class="card-img d-none" src="{{asset('pics/banner/dent_3.jpg')}}" alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?">
                         <div class="card-img-overlay d-flex flex-column">
                             <div class="card-body">
