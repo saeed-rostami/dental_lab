@@ -51,7 +51,7 @@ COPY --chown=www:www . /var/www/html
 # Change current user to www
 USER www
 
-EXPOSE 80
+EXPOSE 9000
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
