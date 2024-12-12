@@ -52,6 +52,11 @@ COPY --chown=www:www . /var/www/html
 USER www
 
 
-# Expose port 9000 and start php-fpm server
-EXPOSE 9000
-CMD ["php-fpm"]
+FROM nginx:alpine
+COPY --from=builder /app /var/www/html
+
+EXPOSE 80
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+CMD ["nginx", "-g", "daemon off;"]
