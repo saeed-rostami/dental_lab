@@ -51,12 +51,8 @@ COPY --chown=www:www . /var/www/html
 # Change current user to www
 USER www
 
-
-FROM nginx:alpine
-COPY --from=builder /app /var/www/html
-
 EXPOSE 80
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD service nginx start && php-fpm
